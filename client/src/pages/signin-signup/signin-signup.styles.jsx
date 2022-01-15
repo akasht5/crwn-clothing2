@@ -8,7 +8,9 @@ export const SignInSignUpContainer = styled.div`
 
     @media screen and (max-width:800px){
         display: grid;
-        width: auto;
+        width:350px;
+        margin:0 auto;
+        margin-left:-10px;
         margin-bottom:100px;
     }
 `;

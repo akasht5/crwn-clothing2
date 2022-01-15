@@ -52,9 +52,11 @@ const SignIn = ({ emailSignInStart,googleSignInStart }) => {
             <ButtonsContainer>
                 <CustomButton 
                 type="submit" 
-                value="Submit" 
+                value="Submit"
+                large 
                 >Sign in</CustomButton>
-                <CustomButton type="button" onClick={googleSignInStart} isGoogleSignIn
+                <span style={{ marginTop:'25px', marginLeft:'170px' }}>OR</span>
+                <CustomButton type="button" onClick={googleSignInStart} isGoogleSignIn large style={{ marginTop:'20px' }}
                 >Sign in with Google</CustomButton>
             </ButtonsContainer>
             

@@ -8,17 +8,20 @@
       "type": "image/x-icon"
     },
     {
-      "src":"crnw-192.png",
+      "src":"crwn-192×192.png",
       "sizes":"192x192",
-      "type":"image/png"
+      "type":"image/png",
+      "purpose":"any maskable"
     },
     {
-      "src":"crwn-512.png",
+      "src":"crwn-512×512.png",
       "sizes":"512x512",
-      "type":"image/png"
+      "type":"image/png",
+      "purpose":"any maskable"
     }
   ],
-  "start_url": ".",
+  "start_url": "index.html",
+  "scope":".",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"

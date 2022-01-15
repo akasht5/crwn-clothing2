@@ -23,11 +23,14 @@ firebase.initializeApp(firebaseConfig);
 export const createUserProfileDocument = async ( userAuth,additionalData ) => {
     if(!userAuth) return;
  
-    const userRef = firestore.doc(`users/${userAuth.uid}`); //This is gives the user doc back (Reference)
+    //This is gives the user doc back (Reference)
+    const userRef = firestore.doc(`users/${userAuth.uid}`); 
 
-    const snapShot = await userRef.get(); //Then we get the the snapshot of the user (Snapshot)
+    //Then we get the the snapshot of the user (Snapshot)
+    const snapShot = await userRef.get(); 
     
-    if(!snapShot.exists){ //If the exists property of the snapshot is false we create a user
+    //If the exists property of the snapshot is false we create a user
+    if(!snapShot.exists){ 
       const { displayName,email } = userAuth;
       const createdAt = new Date();
 

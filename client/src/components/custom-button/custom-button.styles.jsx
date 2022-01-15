@@ -36,6 +36,14 @@ const googleSignInStyles = css`
     }
 `;
 
+const largeButtonStyles = css`
+    min-width: 350px;
+`
+
+const regularButtonStyles = css`
+    min-width: 150px;
+`
+
 const getButtonStyles = props => {
     if(props.isGoogleSignIn){
         return googleSignInStyles;
@@ -44,8 +52,15 @@ const getButtonStyles = props => {
     return props.inverted ? invertedStyles : buttonStyles;
 }
 
+const getButtonSize = props => {
+    if(props.large){
+        return largeButtonStyles
+    }
+
+    return regularButtonStyles
+}
+
 export const CustomButtonContainer = styled.button`
-    min-width: 165px;
     width: auto;
     height: 50px;
     letter-spacing: 0.5px;
@@ -60,5 +75,6 @@ export const CustomButtonContainer = styled.button`
     justify-content: center;
 
     ${getButtonStyles}
+    ${getButtonSize}
 `;
 
